@@ -33,6 +33,9 @@ filetype plugin indent on    " required
 
 syntax on
 filetype on
+set nu
+set noshowmode
+set timeout timeoutlen=1000 ttimeoutlen=10
 
 " Load vim-airline at session start	
 set laststatus=2	
