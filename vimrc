@@ -31,11 +31,44 @@ filetype plugin indent on    " required
 " see :h vundle for more details or wiki for FAQ
 " Put your non-Plugin stuff after this line
 
-syntax on
 filetype on
+
+" color
+colorscheme default
+set background=dark
+syntax enable
+
+" spaces and tabs
+set tabstop=4
+set softtabstop=4
+set expandtab
+
+" UI config
+let mapleader=","
 set nu
 set noshowmode
 set timeout timeoutlen=1000 ttimeoutlen=10
+filetype indent on
+set wildmenu
+set lazyredraw
+set showmatch
+
+" Searching
+set incsearch
+set hlsearch
+nnoremap <leader>/ :nohlsearch<CR>
+
+" Folding
+set foldenable
+set foldlevelstart=10
+set foldnestmax=10
+nnoremap <leader>z za
+set foldmethod=indent
+
+" CtrlP
+let g:ctrlp_match_window = 'bottom,order:ttb'
+let g:ctrlp_switch_buffer = 0
+let g:ctrlp_working_path_mode = 0
 
 " Load vim-airline at session start	
 set laststatus=2	
