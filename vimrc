@@ -34,24 +34,29 @@ filetype plugin indent on    " required
 filetype on
 
 " color
-colorscheme default
+colorscheme elflord
 set background=dark
 syntax enable
 
-" spaces and tabs
+" Formatting
 set tabstop=4
 set softtabstop=4
 set expandtab
+set textwidth=79
+set formatoptions+=t
 
 " UI config
+filetype indent on
+filetype plugin on
 let mapleader=","
 set nu
 set noshowmode
 set timeout timeoutlen=1000 ttimeoutlen=10
-filetype indent on
 set wildmenu
 set lazyredraw
 set showmatch
+set colorcolumn=80
+highlight ColorColumn ctermbg=7
 
 " Searching
 set incsearch
@@ -66,7 +71,7 @@ nnoremap <leader>z za
 set foldmethod=indent
 
 " CtrlP
-let g:ctrlp_match_window = 'bottom,order:ttb'
+" let g:ctrlp_match_window = 'bottom,order:ttb'
 let g:ctrlp_switch_buffer = 0
 let g:ctrlp_working_path_mode = 0
 
