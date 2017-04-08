@@ -2,8 +2,10 @@ set nocompatible              " be iMproved, required
 filetype off                  " required
 
 " set the runtime path to include Vundle and initialize
+
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
+
 " alternatively, pass a path where Vundle should install plugins
 "call vundle#begin('~/some/path/here')
 
@@ -15,10 +17,17 @@ Plugin 'itchyny/lightline.vim'
 Plugin 'vim-syntastic/syntastic'
 Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'scrooloose/nerdtree'
+Plugin 'python-mode/python-mode'
+Plugin 'jlanzarotta/bufexplorer'
+Plugin 'ervandew/supertab'
+Plugin 'scrooloose/nerdcommenter'
+Plugin 'majutsushi/tagbar'
 
 " All of your Plugins must be added before the following line
+
 call vundle#end()            " required
 filetype plugin indent on    " required
+
 " To ignore plugin indent changes, instead use:
 " filetype plugin on
 "
@@ -31,10 +40,8 @@ filetype plugin indent on    " required
 " see :h vundle for more details or wiki for FAQ
 " Put your non-Plugin stuff after this line
 
-filetype on
-
 " color
-colorscheme elflord
+colorscheme default
 set background=dark
 syntax enable
 
@@ -42,12 +49,11 @@ syntax enable
 set tabstop=4
 set softtabstop=4
 set expandtab
+set smarttab
 set textwidth=79
 set formatoptions+=t
 
 " UI config
-filetype indent on
-filetype plugin on
 let mapleader=","
 set nu
 set noshowmode
@@ -55,8 +61,8 @@ set timeout timeoutlen=1000 ttimeoutlen=10
 set wildmenu
 set lazyredraw
 set showmatch
-set colorcolumn=80
-highlight ColorColumn ctermbg=7
+set colorcolumn=+1
+highlight ColorColumn ctermbg=Black
 
 " Searching
 set incsearch
@@ -69,6 +75,12 @@ set foldlevelstart=10
 set foldnestmax=10
 nnoremap <leader>z za
 set foldmethod=indent
+
+" Navigation
+nmap <C-J> <C-W>j
+nmap <C-K> <C-W>k
+nmap <C-H> <C-W>h
+nmap <C-L> <C-W>l
 
 " CtrlP
 " let g:ctrlp_match_window = 'bottom,order:ttb'
