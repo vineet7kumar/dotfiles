@@ -21,3 +21,6 @@ promptinit
 prompt adam2
 
 alias ls="ls --color"
+
+# clear is for the laptop to remove tmux complain about synaptics properties
+clear
