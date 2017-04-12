@@ -17,11 +17,10 @@ Plugin 'itchyny/lightline.vim'
 Plugin 'vim-syntastic/syntastic'
 Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'scrooloose/nerdtree'
-Plugin 'python-mode/python-mode'
-Plugin 'jlanzarotta/bufexplorer'
 Plugin 'ervandew/supertab'
 Plugin 'scrooloose/nerdcommenter'
 Plugin 'majutsushi/tagbar'
+Plugin 'davidhalter/jedi-vim'
 
 " All of your Plugins must be added before the following line
 
@@ -99,3 +98,6 @@ let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
+
+" Settings for python-mode
+let g:pymode_python = 'python3'
