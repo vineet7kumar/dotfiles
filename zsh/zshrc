@@ -20,7 +20,7 @@ compinit
 autoload -Uz promptinit
 promptinit
 prompt off
-prompt bart orange cyan
+prompt bart cyan cyan
 
 # Set terminal colors
 # Comment out to use tmux-256color when tmux started before zsh
