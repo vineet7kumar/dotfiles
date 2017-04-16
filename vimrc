@@ -7,21 +7,25 @@ set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
 " alternatively, pass a path where Vundle should install plugins
-"call vundle#begin('~/some/path/here')
+" call vundle#begin('~/some/path/here')
 
 " let Vundle manage Vundle, required
+
 Plugin 'VundleVim/Vundle.vim'
 
 Plugin 'tpope/vim-fugitive'
 Plugin 'itchyny/lightline.vim'
-Plugin 'vim-syntastic/syntastic'
 Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'scrooloose/nerdtree'
-Plugin 'python-mode/python-mode'
-Plugin 'jlanzarotta/bufexplorer'
 Plugin 'ervandew/supertab'
 Plugin 'scrooloose/nerdcommenter'
 Plugin 'majutsushi/tagbar'
+Plugin 'davidhalter/jedi-vim'
+Plugin 'w0rp/ale'
+Plugin 'sbdchd/neoformat'
+Plugin 'morhetz/gruvbox'
+
+" Plugin 'vim-syntastic/syntastic'
 
 " All of your Plugins must be added before the following line
 
@@ -41,9 +45,10 @@ filetype plugin indent on    " required
 " Put your non-Plugin stuff after this line
 
 " color
-colorscheme default
-set background=dark
+set t_Co=256
 syntax enable
+set background=dark
+colorscheme gruvbox
 
 " Formatting
 set tabstop=4
@@ -61,8 +66,7 @@ set timeout timeoutlen=1000 ttimeoutlen=10
 set wildmenu
 set lazyredraw
 set showmatch
-set colorcolumn=+1
-highlight ColorColumn ctermbg=Black
+set colorcolumn=80
 
 " Searching
 set incsearch
@@ -99,3 +103,6 @@ let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
+
+" Settings for python-mode
+let g:pymode_python = 'python3'
