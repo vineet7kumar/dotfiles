@@ -1,0 +1,15 @@
+# Set the Prezto modules to load (browse modules).
+# The order matters.
+zstyle ':prezto:load' pmodule \
+  'directory' \
+  'utility' \
+  'completion' \
+  'git' \
+  'prompt' \
+  'editor' \
+  'syntax-highlighting' \
+  'history-substring-search' \
+
+zstyle ':prezto:module:prompt' theme 'paradox'
+
+zstyle ':prezto:module:editor' key-bindings 'vi'
