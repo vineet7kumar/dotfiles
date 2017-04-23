@@ -33,4 +33,14 @@ clear
 source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
 
 # import gcloud settings
-source $HOME/.gcloudrc
+if [ -f "$HOME/.gcloudrc" ]; then 
+        source "$HOME/.gcloudrc";
+fi
+
+# Python virtual environment settings
+export WORKON_HOME=$HOME/.virtualenvs
+export PROJECT_HOME=$HOME/_work/projects
+if [ -f "/usr/bin/virtualenvwrapper.sh" ]; then
+        source "/usr/bin/virtualenvwrapper.sh";
+fi
+
