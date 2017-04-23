@@ -31,3 +31,6 @@ alias ls="ls --color"
 clear
 
 source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
+
+# import gcloud settings
+source $HOME/.gcloudrc
