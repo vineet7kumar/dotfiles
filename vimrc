@@ -24,6 +24,7 @@ Plugin 'davidhalter/jedi-vim'
 Plugin 'w0rp/ale'
 Plugin 'sbdchd/neoformat'
 Plugin 'morhetz/gruvbox'
+Plugin 'ludovicchabant/vim-gutentags'
 
 " Plugin 'vim-syntastic/syntastic'
 
@@ -68,6 +69,10 @@ set lazyredraw
 set showmatch
 set colorcolumn=80
 
+" Tags optimizations
+set tags=tags,./tags;$HOME
+
+
 " Searching
 set incsearch
 set hlsearch
@@ -93,16 +98,6 @@ let g:ctrlp_working_path_mode = 0
 
 " Load vim-airline at session start	
 set laststatus=2	
-
-" Recommended settings for syntastic
-set statusline+=%#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}
-set statusline+=%*
-
-let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_auto_loc_list = 1
-let g:syntastic_check_on_open = 1
-let g:syntastic_check_on_wq = 0
 
 " Settings for python-mode
 let g:pymode_python = 'python3'
