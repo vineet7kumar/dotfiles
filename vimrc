@@ -69,6 +69,7 @@ set wildmenu
 set lazyredraw
 set showmatch
 set colorcolumn=80
+set mouse=a
 
 " Tags optimizations
 set tags=tags,./tags;$HOME
