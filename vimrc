@@ -61,6 +61,7 @@ set formatoptions+=t
 
 " UI config
 let mapleader=","
+map <Space> <leader>
 set nu
 set noshowmode
 set timeout timeoutlen=1000 ttimeoutlen=10
@@ -86,10 +87,20 @@ nnoremap <leader>z za
 set foldmethod=indent
 
 " Navigation
-nmap <C-J> <C-W>j
-nmap <C-K> <C-W>k
-nmap <C-H> <C-W>h
-nmap <C-L> <C-W>l
+nnoremap <leader>j <C-W>j
+nnoremap <leader>k <C-W>k
+nnoremap <leader>h <C-W>h
+nnoremap <leader>l <C-W>l
+nnoremap <C-L> gt
+nnoremap <C-H> gT
+
+" File handling
+nnoremap <leader>p :CtrlPBuffer<CR>
+nnoremap <C-N> :NERDTreeToggle<CR>
+
+" Code browsing
+nnoremap <leader>tt :TagbarToggle<CR>
+nnoremap <leader>to :TagbarOpenAutoClose<CR>
 
 " CtrlP
 " let g:ctrlp_match_window = 'bottom,order:ttb'
