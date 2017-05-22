@@ -76,7 +76,7 @@ set belloff=esc
 set guioptions-=m  "menu bar
 set guioptions-=T  "toolbar
 set guioptions-=r  "scrollbar
-set guifont=Hack\ 11
+set guifont=Hack\ 11.5
 
 " Tags optimizations
 set tags=tags,./tags;$HOME
