@@ -70,10 +70,16 @@ set lazyredraw
 set showmatch
 set colorcolumn=80
 set mouse=a
+set belloff=esc
+
+" GUI settings
+set guioptions-=m  "menu bar
+set guioptions-=T  "toolbar
+set guioptions-=r  "scrollbar
+set guifont=Hack\ 11
 
 " Tags optimizations
 set tags=tags,./tags;$HOME
-
 
 " Searching
 set incsearch
