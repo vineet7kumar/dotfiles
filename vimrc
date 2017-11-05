@@ -3,47 +3,24 @@ filetype off                  " required
 
 " set the runtime path to include Vundle and initialize
 
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
+call plug#begin('~/.vim/plugged')
 
-" alternatively, pass a path where Vundle should install plugins
-" call vundle#begin('~/some/path/here')
-
-" let Vundle manage Vundle, required
-
-Plugin 'VundleVim/Vundle.vim'
-
-Plugin 'tpope/vim-fugitive'
-Plugin 'itchyny/lightline.vim'
-Plugin 'ctrlpvim/ctrlp.vim'
-Plugin 'scrooloose/nerdtree'
-Plugin 'ervandew/supertab'
-Plugin 'scrooloose/nerdcommenter'
-Plugin 'majutsushi/tagbar'
-Plugin 'davidhalter/jedi-vim'
-Plugin 'w0rp/ale'
-Plugin 'sbdchd/neoformat'
-Plugin 'morhetz/gruvbox'
-Plugin 'ludovicchabant/vim-gutentags'
-
-" Plugin 'vim-syntastic/syntastic'
+Plug 'tpope/vim-fugitive'
+Plug 'itchyny/lightline.vim'
+Plug 'ctrlpvim/ctrlp.vim'
+Plug 'scrooloose/nerdtree'
+Plug 'ervandew/supertab'
+Plug 'scrooloose/nerdcommenter'
+Plug 'majutsushi/tagbar'
+Plug 'davidhalter/jedi-vim'
+Plug 'w0rp/ale'
+Plug 'sbdchd/neoformat'
+Plug 'morhetz/gruvbox'
+Plug 'ludovicchabant/vim-gutentags'
 
 " All of your Plugins must be added before the following line
 
-call vundle#end()            " required
-filetype plugin indent on    " required
-
-" To ignore plugin indent changes, instead use:
-" filetype plugin on
-"
-" Brief help
-" :PluginList       - lists configured plugins
-" :PluginInstall    - installs plugins; append `!` to update or just :PluginUpdate
-" :PluginSearch foo - searches for foo; append `!` to refresh local cache
-" :PluginClean      - confirms removal of unused plugins; append `!` to auto-approve removal
-"
-" see :h vundle for more details or wiki for FAQ
-" Put your non-Plugin stuff after this line
+call plug#end()            " required
 
 " color
 set t_Co=256
@@ -76,7 +53,7 @@ set belloff=esc
 set guioptions-=m  "menu bar
 set guioptions-=T  "toolbar
 set guioptions-=r  "scrollbar
-set guifont=Hack\ 11
+set guifont=Hack\ 12
 
 " Tags optimizations
 set tags=tags,./tags;$HOME
