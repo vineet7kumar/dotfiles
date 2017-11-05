@@ -26,16 +26,9 @@ prompt bart cyan cyan
 # Comment out to use tmux-256color when tmux started before zsh
 # TERM=xterm-256color
 
-alias ls="ls --color"
-
 clear
 
 source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
-
-# import gcloud settings
-if [ -f "$HOME/.gcloudrc" ]; then 
-        source "$HOME/.gcloudrc";
-fi
 
 # Python virtual environment settings
 export WORKON_HOME=$HOME/.virtualenvs
@@ -44,3 +37,4 @@ if [ -f "/usr/bin/virtualenvwrapper_lazy.sh" ]; then
         source "/usr/bin/virtualenvwrapper_lazy.sh";
 fi
 
+alias ls="ls --color"
